@@ -1,7 +1,3 @@
 [Home](/)
-[Sample Blog Post](/sample-blog-post)
 
-<br><br>
-
-To add links to your other posts,
-simply modify contents of `posts/_toc.md`
+[Deploy Pull Requests to Kubernetes for Review with Azure DevOps](/2020-07-20_Deploy-PR-AzureDevops)
