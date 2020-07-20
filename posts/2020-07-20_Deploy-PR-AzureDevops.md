@@ -30,11 +30,11 @@ trigger: none
 
 variables:
   - name: AzureSubscription
-    value: 'EVE Azure Subscription (sponsored)'
+    value: ''
   - name: KubernetesConnection
-    value: 'EVE AKS (Dev)'
+    value: ''
   - name: ContainerRegistry
-    value: 'EVE ACR DEV (new)'
+    value: ''
   - name: KubernetesConnection
     value: ''
   - name: Tag
