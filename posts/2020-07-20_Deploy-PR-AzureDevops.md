@@ -1,24 +1,9 @@
-> :Hero src=https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?w=1900&h=600&fit=crop,
->       mode=light,
->       target=desktop,
->       leak=156px
+> :Hero src=https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?w=1900&h=600&fit=crop
 
-> :Hero src=https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?w=1200&h=600&fit=crop,
->       mode=light,
->       target=mobile,
->       leak=96px
 
-> :Hero src=https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?w=1900&h=600&fit=crop,
->       mode=dark,
->       target=desktop,
->       leak=156px
 
-> :Hero src=https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?w=1200&h=600&fit=crop,
->       mode=dark,
->       target=mobile,
->       leak=96px
 
-> :Title shadow=0 0 8px black, color=white
+> :Title
 >
 > Deploy Pull Requests to Kubernetes for Review with Azure DevOps
 
@@ -129,7 +114,7 @@ Here we can setup requirements for Pull Request that are being made against the 
 
 Add a Build Validation policy for the Pull Request Pipeline we created earlier and declare its trigger to manual and its requirement to optional.
 
-![Create a new optional and manual Build Validation policy for the Azure Pipeline that builds and deploys the Pull Request](2020-07-20_Deploy-PR-AzureDevops_Untitled2.png)
+![Create a new optional and manual Build Validation policy for the Azure Pipeline that builds and deploys the Pull Request](img/2020-07-20_Deploy-PR-AzureDevops_Untitled2.png)
 
 Now, if someone creates a new Pull Request targeting the branch you just setup the new policy for, the reviewer can chose to deploy the changes to a dedicated Kubernetes namespace for detailed review, just by kicking off the newly created pipeline.
 

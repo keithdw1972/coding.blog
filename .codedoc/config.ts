@@ -20,7 +20,7 @@ export const config = /*#__PURE__*/configuration({
   },
   page: {
     title: {
-      base: 'Robin-Manuels Coding Blog'         // --> change this to change your blog's title
+      base: "Robin-Manuel Thiel's Coding Blog"        // --> change this to change your blog's title
     },
     favicon: '/favicon.ico'
   },
