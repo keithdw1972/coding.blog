@@ -14,18 +14,18 @@ import { smoothLoading } from '/home/runner/work/coding.blog/coding.blog/.codedo
 import { tocHighlight } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toc-highlight.js';tocHighlight();
 import { postNavSearch } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/search/post-nav/index.js';postNavSearch();
 import { copyLineLinks } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-links/copy-line-link.js';copyLineLinks();
+import { Author } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/coding-blog-plugin/dist/es5/components/author/index.js';
 import { ToCToggle } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toggle/index.js';
 import { DarkModeSwitch } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/darkmode/index.js';
 import { ConfigTransport } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/core/dist/es6/transport/config.js';
-import { Author } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/coding-blog-plugin/dist/es5/components/author/index.js';
 import { ArticleCard } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/coding-blog-plugin/dist/es5/components/article-card/index.js';
 import { ToCPrevNext } from '/home/runner/work/coding.blog/coding.blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/prevnext/index.js';
 
 const components = {
+  'GA8vSAeIaaF8huvrB6Y/7w==': Author,
   'qjpSlEudKVAIR+86zN5VUw==': ToCToggle,
   'NteKuUkC7X6lkz738dUDfg==': DarkModeSwitch,
   'otQhKrl7Y3++fy+oD8bipw==': ConfigTransport,
-  'GA8vSAeIaaF8huvrB6Y/7w==': Author,
   'Fln/Fo9qoOoUvWsLKU130w==': ArticleCard,
   'nUqXUD+mPjUWnPrBdYDMtg==': ToCPrevNext
 };
