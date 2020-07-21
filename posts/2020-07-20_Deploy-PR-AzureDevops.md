@@ -15,6 +15,7 @@ When a Pull Request got created, you might want to try out the changes in a test
 
 To achieve automatic deployments of Pull Requests in Azure DevOps, we need a few things beside the obvious ones like a Kubernetes Cluster and your application as a Container with a Helm Chart or deployment definition.
 
+- Azure DevOps Service Connections for Azure, Kubernetes and a Container Registry (taken as given in this post)
 - Azure Pipeline to build the app and deploy it
 - An optional Build Trigger to kick off the pipeline
 
@@ -26,15 +27,14 @@ We will setup Azure DevOps, to offer running an additional Build Validation Bran
 name: $(BuildID)
 trigger: none
 
+# Replace these variables with your own values
 variables:
   - name: AzureSubscription
-    value: ''
+    value: '<Name of Azure Resource Manager service connection>'
   - name: KubernetesConnection
-    value: ''
+    value: '<Name of Kubernetes service connection>'
   - name: ContainerRegistry
-    value: ''
-  - name: KubernetesConnection
-    value: ''
+    value: '<Name of Container Registry service connection>'
   - name: Tag
     value: 'pr$(System.PullRequest.PullRequestId)-$(Build.BuildId)'
 
@@ -45,6 +45,8 @@ stages:
         pool:
           vmImage: 'Ubuntu-16.04'
         steps:
+          # This step build the Docker image and pushes it
+          # to your container registry.
           - task: Docker@2
             displayName: 'Build and push container image'
             inputs:
@@ -65,6 +67,8 @@ stages:
           - name: ReleaseName
             value: 'myapp-pr$(System.PullRequest.PullRequestId)'
 
+          # This step creates a new Kubernetes Namespace
+          # for the Pull Request deployment.
           - task: Kubernetes@1
             displayName: 'Create Namespace'
             inputs:
@@ -84,6 +88,8 @@ stages:
             inputs:
               helmVersionToInstall: 'v3.1.0'
 
+          # This step deploys your application to the newly
+          # created Namespace as a Helm Chart.
           - task: HelmDeploy@0
             displayName: 'Install Helm chart'
             inputs:
