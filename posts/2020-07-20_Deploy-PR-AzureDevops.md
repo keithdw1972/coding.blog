@@ -1,6 +1,4 @@
-> :Hero src=https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?w=1900&h=600&fit=crop
-
-
+> :Hero src=https://images.unsplash.com/photo-1539269071019-8bc6d57b0205?w=1900&h=600&fit=crop
 
 
 > :Title
